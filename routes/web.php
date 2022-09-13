@@ -24,8 +24,8 @@ Route::get('/', function () {
 
 });
 
-Route::get('/home',[homecontroller::class, 'index']);
+Route::get('/home',[homecontroller::class, 'index'])->name('home');
 
 
-Route::get('/a-propos',[AboutController::class, 'index']);
-Route::get('/a-propos/{id}', [AboutController::class, 'show']);
+Route::get('/a-propos',[AboutController::class, 'index'])->name('about');
+Route::get('/a-propos/{id}', [AboutController::class, 'show'])->name('about.show');
